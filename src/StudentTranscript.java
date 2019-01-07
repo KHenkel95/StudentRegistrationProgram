@@ -1,9 +1,3 @@
-/*
-Author: Ken Henkel
-Prof. Smith-Thompson
-CUS1116
- */
-
 import java.util.ArrayList;
 
 public class StudentTranscript extends StudentGrades {

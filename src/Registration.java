@@ -1,8 +1,3 @@
-/*
-Author: Ken Henkel
-Prof. Smith-Thompson
-CUS1116
- */
 
 import java.io.File;
 import java.io.FileNotFoundException;

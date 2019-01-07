@@ -1,9 +1,3 @@
-/*
-Author: Ken Henkel
-Prof. Smith-Thompson
-CUS1116
- */
-
 public class StudentGrades extends Student {
 
     private double totalCredits;

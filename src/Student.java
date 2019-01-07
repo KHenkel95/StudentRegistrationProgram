@@ -1,8 +1,3 @@
-/*
-Author: Ken Henkel
-Prof. Smith-Thompson
-CUS1116
- */
 
 public class Student {
     private String firstName;
