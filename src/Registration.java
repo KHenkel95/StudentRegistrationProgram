@@ -28,7 +28,7 @@ public class Registration {
         return roster2;
     }
     public static void main(String[] args)throws FileNotFoundException{
-
+//TODO add input for user to make custom roster size
         Student[] roster = new Student[5];
         Scanner kybd = new Scanner(System.in);
         String firstName;
