@@ -21,6 +21,7 @@ public class StudentGrades extends Student {
         this.currentGPA=cGpa;
     }
 //Methods
+    @Override
     public String toString(){
         return "totalCredits+\n+currentGPA";
     }

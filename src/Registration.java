@@ -6,15 +6,16 @@ import java.util.Scanner;
 public class Registration {
     //Methods
     public static void storeRoster(Student[] roster)throws FileNotFoundException {
-        PrintWriter output = new PrintWriter("C://Users//Ken//IdeaProjects//CUS1116Project//src//Roster2.txt");
+        PrintWriter output = new PrintWriter("C://Users//Ken//IdeaProjects//CUS1116Project//src//Roster.txt");
         for(Student student : roster){
-            output.print(student);
+            output.println(student);
         }
         output.close();
     }
     public static Student[] loadRoster()throws FileNotFoundException{
         File infile = new File ("C://Users//Ken//IdeaProjects//CUS1116Project//src//Roster.txt");
         Scanner reader = new Scanner(infile);
+        //TODO make it so that roster2 scales up when add student is used
         Student[] roster2 = new Student[5];
         int arrayCounter = 0;
         while(reader.hasNextLine()){

@@ -11,7 +11,7 @@ public class StudentTranscript extends StudentGrades {
     public static void addCourse(String course){
         courses.add(course);
     }
-
+    @Override
     public String toString(){
         String courseList = "";
         for (int i = 0; i < courses.size(); i++)

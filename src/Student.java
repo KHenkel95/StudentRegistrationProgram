@@ -38,7 +38,7 @@ public class Student {
     public Boolean equals(Student other){
         return this.idNumber.equals(other.idNumber);
     }
-
+    @Override
     public String toString(){
         return firstName+"\n"+lastName+"\n"+idNumber;
     }
