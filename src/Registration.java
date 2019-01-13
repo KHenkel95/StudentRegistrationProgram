@@ -28,6 +28,17 @@ public class Registration {
         reader.close();
         return roster2;
     }
+    public static void insertionSort(Student[] roster){
+        for (int j = 1; j < roster.length; j++){
+            int i = j;
+            Student x = roster[j];
+            while ((i > 0) && (x.compareTo(roster[i-1]) < 0))
+            {roster[i] = roster[i-1];
+                i--;
+            }
+            roster[i] = x;
+        }
+    }
     public static void main(String[] args)throws FileNotFoundException{
 //TODO add input for user to make custom roster size
         Student[] roster = new Student[5];
@@ -44,16 +55,7 @@ public class Registration {
             idNumber = kybd.next();
             roster[t] = new Student(firstName, lastName, idNumber);
         }
-        //InsertionSort
-        for (int j = 1; j < roster.length; j++){
-            int i = j;
-            Student x = roster[j];
-            while ((i > 0) && (x.compareTo(roster[i-1]) < 0))
-            {roster[i] = roster[i-1];
-                i--;
-            }
-            roster[i] = x;
-        }
+        insertionSort(roster);
         int menu = -1;
         do{
             System.out.println("Press: \n1. to Load Roster\n2. Store Roster\n3. Add Student\n4. Display Student\n" +
@@ -82,16 +84,7 @@ public class Registration {
                     idNumber = kybd.next();
                     newRoster[newLength-1] = new Student(firstName, lastName, idNumber);
                     roster = newRoster;
-                    //InsertionSort
-                    for (int j = 1; j < roster.length; j++){
-                        int i = j;
-                        Student x = roster[j];
-                        while ((i > 0) && (x.compareTo(roster[i-1]) < 0))
-                        {roster[i] = roster[i-1];
-                            i--;
-                        }
-                        roster[i] = x;
-                    }
+                    insertionSort(roster);
                 break;
                 case 4:
                     System.out.println("Enter the Id Number of the Student to display: ");
