@@ -40,6 +40,7 @@ public class Registration {
         }
     }
     public static void main(String[] args)throws FileNotFoundException{
+    Gui.launch(Gui.class, args);
 //TODO add input for user to make custom roster size
         Student[] roster = new Student[5];
         Scanner kybd = new Scanner(System.in);
