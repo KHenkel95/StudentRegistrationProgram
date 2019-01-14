@@ -42,11 +42,17 @@ public class Registration {
     public static void main(String[] args)throws FileNotFoundException{
     Gui.launch(Gui.class, args);
 //TODO add input for user to make custom roster size
-        Student[] roster = new Student[5];
+        /*int rosterSize;
+        Scanner kybd = new Scanner(System.in);
+        System.out.println("How many students would you like to add to the roster?");
+        rosterSize = kybd.nextInt();
+        Student[] roster = new Student[rosterSize];
+        */
         Scanner kybd = new Scanner(System.in);
         String firstName;
         String lastName;
         String idNumber;
+        Student[] roster = new Student[5];
         for(int t = 0; t < roster.length; t++){
             System.out.println("Enter the Student's First Name: ");
             firstName = kybd.next();
@@ -61,6 +67,7 @@ public class Registration {
         do{
             System.out.println("Press: \n1. to Load Roster\n2. Store Roster\n3. Add Student\n4. Display Student\n" +
                     "5. Display Roster\n6. Delete Student\nor 999 to exit");
+            //FIXME Fix infinite loop if an invalid input is entered
             if(kybd.hasNextInt()){
              menu = kybd.nextInt();
             }
