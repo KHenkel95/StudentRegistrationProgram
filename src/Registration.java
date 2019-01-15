@@ -72,14 +72,12 @@ public class Registration {
             System.out.println("Press: \n1. to Load Roster\n2. Store Roster\n3. Add Student\n4. Display Student\n" +
                     "5. Display Roster\n6. Delete Student\nor 999 to exit");
             //FIXME Fix infinite loop if an invalid input is entered
-            do {
-                try{
-                    menu = kybd.nextInt();
-                }catch (InputMismatchException e){
-                    System.out.println("Please enter a valid number");
-                }
-                kybd.nextLine();
-            } while(!kybd.hasNextInt());
+            try{
+                menu = kybd.nextInt();
+            }catch(InputMismatchException e){
+                System.out.println("Please input a valid number");
+                kybd.next();
+            }
             switch (menu) {
                 case 1:
                     loadRoster();

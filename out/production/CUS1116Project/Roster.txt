@@ -1,6 +1,6 @@
 karen
 henkel
-5
+4
 kelly
 henkel
 2
@@ -9,7 +9,7 @@ henkel
 1
 mike
 henkel
-4
+5
 murphy
 henkel
 3
