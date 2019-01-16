@@ -71,18 +71,10 @@ public class Registration {
         do {
             System.out.println("Press: \n1. to Load Roster\n2. Store Roster\n3. Add Student\n4. Display Student\n" +
                     "5. Display Roster\n6. Delete Student\nor 999 to exit");
-<<<<<<< HEAD
             if(kybd.hasNextInt()){
                 menu = kybd.nextInt();
             }
             else{
-=======
-            //FIXME Fix infinite loop if an invalid input is entered
-            try{
-                menu = kybd.nextInt();
-            }catch(InputMismatchException e){
-                System.out.println("Please input a valid number");
->>>>>>> 2515389f3b5df3154e98047a5044060e92bbbb5e
                 kybd.next();
             }
             switch (menu) {
