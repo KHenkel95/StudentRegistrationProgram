@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class Registration {
     //Methods
     public static void storeRoster(Student[] roster) throws FileNotFoundException {
-        PrintWriter output = new PrintWriter("C://Users//Ken//IdeaProjects//CUS1116Project//src//Roster.txt");
+        PrintWriter output = new PrintWriter("Roster.txt");
         for (Student student : roster) {
             output.println(student);
         }
@@ -15,7 +15,7 @@ public class Registration {
     }
 
     public static Student[] loadRoster() throws FileNotFoundException {
-        File infile = new File("C://Users//Ken//IdeaProjects//CUS1116Project//src//Roster.txt");
+        File infile = new File("Roster.txt");
         Scanner reader = new Scanner(infile);
         //TODO make it so that roster2 scales up when add student is used
         Student[] roster2 = new Student[5];
@@ -71,15 +71,12 @@ public class Registration {
         do {
             System.out.println("Press: \n1. to Load Roster\n2. Store Roster\n3. Add Student\n4. Display Student\n" +
                     "5. Display Roster\n6. Delete Student\nor 999 to exit");
-            //FIXME Fix infinite loop if an invalid input is entered
-            do {
-                try{
-                    menu = kybd.nextInt();
-                }catch (InputMismatchException e){
-                    System.out.println("Please enter a valid number");
-                }
-                kybd.nextLine();
-            } while(!kybd.hasNextInt());
+            if(kybd.hasNextInt()){
+                menu = kybd.nextInt();
+            }
+            else{
+                kybd.next();
+            }
             switch (menu) {
                 case 1:
                     loadRoster();
