@@ -17,7 +17,6 @@ public class Registration {
     public static Student[] loadRoster() throws FileNotFoundException {
         File infile = new File("Roster.txt");
         Scanner reader = new Scanner(infile);
-        //TODO make it so that roster2 scales up when add student is used
         int u = 0;
         while(reader.hasNextLine()){
             u++;
