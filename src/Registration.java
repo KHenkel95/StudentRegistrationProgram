@@ -18,8 +18,14 @@ public class Registration {
         File infile = new File("Roster.txt");
         Scanner reader = new Scanner(infile);
         //TODO make it so that roster2 scales up when add student is used
-        Student[] roster2 = new Student[5];
+        int u = 0;
+        while(reader.hasNextLine()){
+            u++;
+            reader.nextLine();
+        }
+        int roster2Length = u/3;
         int arrayCounter = 0;
+        Student[] roster2 = new Student[roster2Length];
         while (reader.hasNextLine()) {
             String name1 = reader.nextLine();
             String name2 = reader.nextLine();
